@@ -8,12 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"  >
 </head>
 <body>
     <section class ="header">
         <nav>
             <a href="index.html"><img src="eduford_img/logo.png" alt=""></a>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -23,13 +26,27 @@
                 </ul>
 
             </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+
         </nav>
         <div class="text-box">
             <h1>World's No.1 University</h1>
             <p>Launching the next generation of leaders</p>
-            <a href="">Visit Us</a>
+            <a href= ""class = "hero-btn">Visit Us</a>
         </div>
 
     </section>
+
+    
+<!-- javascript for toggling menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right =  "0";    
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
